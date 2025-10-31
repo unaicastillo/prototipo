@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --fondo-principal:#F3FFEE;
+    --texto-principal:#1C1C1C;
+    --color-primario: #2C2C2C;
+    --color-secundario: #909090;
+    --fondo-header: #B2DFDB;
+}
+@font-face {
+  font-family: 'FlameFont';
+  src: url('fonts/FlameFont.woff') format('woff');
+}
+
+body{
+    display: grid;
+    grid-template-rows: auto 1fr 50px;
+    min-height: 100vh;
+    background-color: var(--fondo-principal);
+}
+main{
+    display: grid;
+    align-content: center;
+    height: 90vh;
+    justify-content: center;
+}
+#left-container{
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 0%;
+    height: 100%;
+    justify-content: space-between;
+    padding: 10px;
+    gap: 16px;
+}
+#right-container{
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 0%;
+    height: 100%;
+    justify-content: space-between;
+    padding: 10px;
+    gap: 16px;
+}
+#buttom-container{
+    display: grid;
+}
+
+#container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    gap: 16px;
+    height: 80vh;
+    width: 90vw;
+    max-width: 1400px;
+    padding: 0;
+    margin-top: auto;
+}
+#info-container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: calc(50% - 8px);
+    padding: 16px;
+    gap: 8px;
+}
+
+header{
+    background-color:var(--fondo-header);
+    height: 59px;
+    width: 100%;
+    margin: 0;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+h1{
+    font-family: 'Flamefont', sans-serif;
+}
+
+footer{
+    display: flex;
+    background-color: var(--color-primario);
+    background-attachment: fixed;
+    align-items: center;
+    padding: 16px;
+}
+footer>p{
+    color: white;
+}
+#info-container-left{
+    height: 100%;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 8px;
+}
+
+#info-container-right{
+    width: 70%;
+    height: 100%;
+    background-color: var(--color-secundario);
+    padding: 8px;
+}
+
+.btn{
+    flex: 1 1 0%;
+    background: var(--color-primario);
+    color: white;
+    border: none;
+    border-radius: 15%;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 12px;
+}
+.btn:active{transform: translateY(1px);} 
